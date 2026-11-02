@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6e1016" />
+  <meta name="description" content="Pendaftaran Lomba Tari Condong dan Tari Oleg STANFEST Vol. IV: Nirleka Pramerta." />
+  <title>STANFEST Vol. IV | Nirleka Pramerta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --wine: #6e1016;
+      --wine-dark: #39090d;
+      --wine-deep: #260609;
+      --gold: #d99a2b;
+      --gold-light: #f0c36b;
+      --cream: #f1e5ce;
+      --cream-muted: #d9c8aa;
+      --ink: #2b080b;
+      --white: #fff8ec;
+      --serif: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+      --body: 'Cormorant Garamond', Georgia, serif;
+      --script: 'Great Vibes', cursive;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--white);
+      background:
+        radial-gradient(ellipse at 50% 12%, rgba(180, 73, 35, .23), transparent 36rem),
+        repeating-linear-gradient(0deg, rgba(20, 0, 0, .10) 0 1px, transparent 1px 5px),
+        repeating-linear-gradient(90deg, rgba(255, 205, 116, .035) 0 1px, transparent 1px 7px),
+        linear-gradient(135deg, #79151b 0%, #5b0c12 50%, #3b080d 100%);
+      font-family: var(--body);
+      font-size: 19px;
+      overflow-x: hidden;
+    }
+    body::before, body::after {
+      content: '';
+      position: fixed;
+      z-index: -1;
+      width: 34vw;
+      height: 34vw;
+      max-width: 470px;
+      max-height: 470px;
+      border: 1px solid rgba(217,154,43,.16);
+      border-radius: 48% 52% 42% 58%;
+      transform: rotate(35deg);
+      pointer-events: none;
+    }
+    body::before { top: -18vw; left: -15vw; box-shadow: 0 0 0 14px rgba(217,154,43,.025), 0 0 0 28px rgba(217,154,43,.025); }
+    body::after { right: -17vw; bottom: -18vw; box-shadow: 0 0 0 14px rgba(217,154,43,.025), 0 0 0 28px rgba(217,154,43,.025); }
+    a { color: inherit; }
+
+    .site-header {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+      padding: 22px clamp(20px, 5vw, 76px);
+    }
+    .nav {
+      width: min(1240px, 100%);
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 13px;
+      letter-spacing: .18em;
+      font-weight: 700;
+    }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px; height: 38px;
+      border: 1px solid rgba(240,195,107,.65);
+      border-radius: 50%;
+      color: var(--gold-light);
+      font-size: 18px;
+    }
+    .nav-links { display: flex; align-items: center; gap: clamp(16px, 3vw, 34px); }
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(255,248,236,.84);
+      font-family: var(--serif);
+      font-size: 10px;
+      letter-spacing: .13em;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta {
+      border: 1px solid rgba(217,154,43,.72);
+      padding: 10px 16px;
+      color: var(--gold-light) !important;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 760px;
+      padding: 140px clamp(22px, 6vw, 88px) 76px;
+      display: flex;
+      align-items: center;
+      isolation: isolate;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 22px 18px 22px;
+      border: 1px solid rgba(241,229,206,.23);
+      outline: 1px solid rgba(217,154,43,.18);
+      outline-offset: 7px;
+      clip-path: polygon(0 2%, 2% 0, 98% 0, 100% 2%, 100% 98%, 98% 100%, 2% 100%, 0 98%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .hero::after {
+      content: '❧';
+      position: absolute;
+      left: 50%; bottom: 4px;
+      transform: translateX(-50%);
+      color: rgba(217,154,43,.38);
+      font-size: 68px;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .hero-inner {
+      width: min(1240px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .78fr);
+      align-items: center;
+      gap: clamp(38px, 7vw, 100px);
+    }
+    .hero-copy { max-width: 690px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 23px;
+    }
+    .eyebrow::before, .eyebrow::after { content: ''; width: 34px; height: 1px; background: var(--gold); }
+    h1 {
+      margin: 0;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: clamp(56px, 8.2vw, 112px);
+      font-weight: 600;
+      letter-spacing: -.055em;
+      line-height: .94;
+      text-shadow: 0 4px 0 rgba(48,5,8,.3), 0 0 28px rgba(217,154,43,.12);
+    }
+    h1 sup { font-size: .38em; letter-spacing: -.04em; vertical-align: top; position: relative; top: .2em; margin-left: 3px; }
+    .script-title {
+      margin: 10px 0 20px;
+      color: var(--gold-light);
+      font-family: var(--script);
+      font-size: clamp(38px, 5.4vw, 66px);
+      line-height: 1.05;
+      font-weight: 400;
+    }
+    .hero-description {
+      max-width: 560px;
+      color: rgba(255,248,236,.83);
+      font-size: clamp(19px, 2vw, 23px);
+      line-height: 1.4;
+      margin: 0 0 30px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; }
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 20px;
+      text-decoration: none;
+      font-family: var(--serif);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      transition: transform .22s ease, background .22s ease, box-shadow .22s ease;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-primary { background: var(--gold); color: var(--wine-dark); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .btn-primary:hover { background: var(--gold-light); box-shadow: 0 12px 28px rgba(0,0,0,.25); }
+    .btn-outline { border: 1px solid rgba(240,195,107,.72); color: var(--gold-light); background: rgba(38,6,9,.15); }
+    .btn-outline:hover { background: rgba(217,154,43,.12); }
+    .hero-note { color: rgba(241,229,206,.58); font-size: 15px; margin-top: 20px; font-style: italic; }
+
+    .poster-wrap { position: relative; width: min(100%, 430px); justify-self: center; }
+    .poster-frame {
+      position: relative;
+      padding: 12px;
+      background: linear-gradient(135deg, #f2e5ce, #c9b38c 38%, #f4e8d2 70%, #bba47a);
+      box-shadow: 0 25px 55px rgba(16,0,2,.48), 0 0 0 1px rgba(255,255,255,.18);
+      transform: rotate(1.4deg);
+    }
+    .poster-frame::before, .poster-frame::after {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(99,54,25,.35);
+      pointer-events: none;
+    }
+    .poster-frame img { display: block; width: 100%; height: auto; }
+    .poster-stamp {
+      position: absolute;
+      left: -27px; top: 44%;
+      transform: rotate(-7deg);
+      padding: 12px 15px;
+      background: rgba(225,202,174,.92);
+      color: #5a1717;
+      border: 1px solid rgba(92,35,25,.5);
+      box-shadow: 0 7px 18px rgba(0,0,0,.2);
+      font-family: var(--serif);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .poster-caption {
+      text-align: center;
+      color: rgba(241,229,206,.62);
+      font-size: 14px;
+      font-style: italic;
+      margin-top: 23px;
+    }
+
+    .ornament-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      color: var(--gold);
+      opacity: .78;
+      margin: 10px auto 0;
+      width: min(460px, 85%);
+    }
+    .ornament-divider::before, .ornament-divider::after { content: ''; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--gold)); }
+    .ornament-divider::after { transform: rotate(180deg); }
+
+    .facts {
+      position: relative;
+      padding: 36px clamp(22px, 6vw, 88px);
+      background: rgba(33,4,7,.42);
+      border-top: 1px solid rgba(217,154,43,.28);
+      border-bottom: 1px solid rgba(217,154,43,.28);
+    }
+    .facts-inner {
+      width: min(1120px, 100%);
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .fact { text-align: center; padding: 7px 18px; }
+    .fact-label { color: var(--gold); font-family: var(--serif); font-size: 11px; letter-spacing: .18em; margin-bottom: 8px; }
+    .fact-value { color: var(--cream); font-size: 21px; line-height: 1.2; }
+
+    section.content-section { padding: 100px clamp(22px, 6vw, 88px); }
+    .section-inner { width: min(1120px, 100%); margin: auto; }
+    .section-heading { text-align: center; margin: 0 auto 48px; max-width: 700px; }
+    .section-kicker { color: var(--gold-light); font-family: var(--serif); font-size: 10px; letter-spacing: .25em; text-transform: uppercase; }
+    h2 {
+      margin: 12px 0 12px;
+      color: var(--gold);
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.1;
+    }
+    .section-heading p { color: rgba(255,248,236,.72); font-size: 20px; line-height: 1.4; margin: 0; }
+
+    .competition-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .competition-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 300px;
+      padding: 36px;
+      background:
+        linear-gradient(135deg, rgba(42,5,9,.94), rgba(104,17,23,.87)),
+        url('assets/banner-stanfest.jpeg') center / cover;
+      border: 1px solid rgba(217,154,43,.48);
+      box-shadow: 0 18px 40px rgba(20,0,2,.2);
+      isolation: isolate;
+    }
+    .competition-card::before {
+      content: '❧';
+      position: absolute;
+      z-index: -1;
+      right: -12px; bottom: -58px;
+      color: rgba(217,154,43,.13);
+      font-size: 210px;
+      line-height: 1;
+      transform: rotate(-25deg);
+    }
+    .card-number { color: rgba(240,195,107,.68); font-family: var(--serif); font-size: 12px; letter-spacing: .2em; }
+    .competition-card h3 { color: var(--gold); font-family: var(--serif); font-size: clamp(27px, 3vw, 36px); font-weight: 500; line-height: 1.08; margin: 18px 0 12px; }
+    .competition-card p { max-width: 390px; color: rgba(255,248,236,.76); font-size: 19px; line-height: 1.35; margin: 0 0 26px; }
+    .card-link { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--gold-light); border-bottom: 1px solid rgba(240,195,107,.6); padding-bottom: 7px; font-family: var(--serif); font-size: 10px; letter-spacing: .16em; font-weight: 700; }
+    .card-link span { font-size: 17px; transition: transform .2s ease; }
+    .card-link:hover span { transform: translateX(5px); }
+
+    .banner-showcase { padding: 0 clamp(18px, 4vw, 60px) 94px; }
+    .banner-showcase img {
+      display: block;
+      width: min(1320px, 100%);
+      height: auto;
+      margin: 0 auto;
+      border: 8px solid rgba(238,224,198,.9);
+      outline: 1px solid rgba(217,154,43,.55);
+      box-shadow: 0 24px 60px rgba(15,0,2,.35);
+    }
+    .countdown-section { padding: 0 clamp(22px, 6vw, 88px) 100px; }
+    .countdown-box {
+      width: min(820px, 100%);
+      margin: auto;
+      text-align: center;
+      padding: 38px 25px 42px;
+      border-top: 1px solid rgba(217,154,43,.55);
+      border-bottom: 1px solid rgba(217,154,43,.55);
+      background: linear-gradient(90deg, transparent, rgba(35,4,7,.32), transparent);
+    }
+    .countdown-label { color: var(--cream-muted); font-family: var(--serif); font-size: 10px; letter-spacing: .2em; }
+    .countdown { display: flex; justify-content: center; gap: clamp(12px, 4vw, 42px); margin-top: 20px; }
+    .time-unit strong { display: block; color: var(--gold); font-family: var(--serif); font-size: clamp(30px, 5vw, 48px); font-weight: 500; line-height: 1; }
+    .time-unit span { display: block; color: rgba(241,229,206,.66); font-size: 14px; margin-top: 7px; }
+
+    .closing { padding: 0 22px 90px; text-align: center; }
+    .closing h2 { font-size: clamp(31px, 4vw, 44px); }
+    .closing .script-title { font-size: clamp(36px, 5vw, 58px); margin: 0 0 22px; }
+    .closing p { color: rgba(255,248,236,.72); margin: 0 auto 25px; max-width: 650px; font-size: 20px; }
+    footer {
+      padding: 25px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(217,154,43,.25);
+      background: rgba(24,2,5,.38);
+      color: rgba(241,229,206,.58);
+      font-size: 15px;
+    }
+    footer strong { color: var(--gold-light); font-family: var(--serif); font-size: 10px; letter-spacing: .13em; }
+
+    .fade-up { opacity: 0; transform: translateY(22px); transition: opacity .75s ease, transform .75s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 850px) {
+      .hero { min-height: auto; padding-top: 125px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-copy { text-align: center; margin: auto; }
+      .hero-description { margin-left: auto; margin-right: auto; }
+      .hero-actions { justify-content: center; }
+      .eyebrow { justify-content: center; }
+      .poster-wrap { width: min(370px, 82%); }
+      .facts-inner { gap: 18px; }
+    }
+    @media (max-width: 620px) {
+      body { font-size: 17px; }
+      .site-header { padding: 16px 18px; }
+      .nav { justify-content: center; }
+      .brand { font-size: 11px; }
+      .nav-links { display: none; }
+      .hero { padding: 112px 22px 64px; }
+      .hero::before { inset: 12px 9px; outline-offset: 4px; }
+      .hero-inner { gap: 36px; }
+      h1 { font-size: clamp(49px, 14vw, 72px); }
+      .script-title { font-size: 43px; }
+      .hero-description { font-size: 19px; }
+      .btn { width: 100%; }
+      .poster-wrap { width: min(320px, 86%); }
+      .poster-stamp { left: -18px; font-size: 8px; padding: 9px 10px; }
+      .facts { padding: 22px 20px; }
+      .facts-inner { grid-template-columns: 1fr; gap: 13px; }
+      .fact { padding: 8px 0; border-bottom: 1px solid rgba(217,154,43,.13); }
+      .fact:last-child { border-bottom: 0; }
+      .fact-value { font-size: 19px; }
+      section.content-section { padding: 72px 20px; }
+      .section-heading { margin-bottom: 32px; }
+      .competition-grid { grid-template-columns: 1fr; }
+      .competition-card { min-height: 275px; padding: 28px 25px; }
+      .banner-showcase { padding: 0 14px 70px; }
+      .banner-showcase img { border-width: 4px; }
+      .countdown-section { padding: 0 20px 75px; }
+      .countdown-box { padding: 28px 12px 32px; }
+      .countdown { gap: 14px; }
+      .time-unit strong { font-size: 29px; }
+      .time-unit span { font-size: 12px; }
+      .closing { padding-bottom: 70px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      .fade-up { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda"><span class="brand-mark">✺</span><span>STANFEST <span style="color:#f0c36b">VOL. IV</span></span></a>
+      <div class="nav-links">
+        <a href="#tentang">TENTANG</a>
+        <a href="#lomba">CABANG LOMBA</a>
+        <a href="#jadwal">JADWAL</a>
+        <a class="nav-cta" href="#daftar">DAFTAR SEKARANG</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-inner">
+        <div class="hero-copy fade-up">
+          <div class="eyebrow">Pendaftaran Lomba Tari</div>
+          <h1>STANFEST<sup>#4</sup></h1>
+          <div class="script-title">Nirleka Pramerta</div>
+          <p class="hero-description">Merayakan keindahan gerak, warisan budaya, dan jiwa seni dalam satu panggung. Tunjukkan pesonamu di STANFEST Vol. IV.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://forms.gle/16CqdJFcGmfTYQQD9" target="_blank" rel="noopener noreferrer">Daftar Tari Condong <span>↗</span></a>
+            <a class="btn btn-outline" href="https://forms.gle/cpe7LXa8eCnxoEMDA" target="_blank" rel="noopener noreferrer">Daftar Tari Oleg <span>↗</span></a>
+          </div>
+          <p class="hero-note">Peserta terbatas. Segera daftarkan dirimu!</p>
+        </div>
+        <div class="poster-wrap fade-up">
+          <div class="poster-frame">
+            <img src="assets/poster-stanfest.jpeg" alt="Poster resmi STANFEST Vol. IV Nirleka Pramerta" />
+          </div>
+          <div class="poster-stamp">PESERTA<br>TERBATAS</div>
+          <div class="poster-caption">Seni, tradisi, dan keanggunan dalam satu perayaan.</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament-divider" aria-hidden="true">✧ ❧ ✧</div>
+
+    <section class="facts" id="tentang" aria-label="Informasi acara">
+      <div class="facts-inner">
+        <div class="fact fade-up">
+          <div class="fact-label">LOKASI</div>
+          <div class="fact-value">Wantilan Pura Payogan<br>Agung Ketewel</div>
+        </div>
+        <div class="fact fade-up">
+          <div class="fact-label">WAKTU PENDAFTARAN</div>
+          <div class="fact-value">1 November – 15 Desember 2026</div>
+        </div>
+        <div class="fact fade-up">
+          <div class="fact-label">WAKTU PELAKSANAAN</div>
+          <div class="fact-value">6 Februari 2027</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="lomba">
+      <div class="section-inner">
+        <div class="section-heading fade-up">
+          <div class="section-kicker">Pilih kategori lomba</div>
+          <h2>Ruang untuk Bersinar</h2>
+          <p>Dua cabang lomba tari, satu panggung untuk menampilkan dedikasi dan keindahan seni.</p>
+        </div>
+        <div class="competition-grid" id="daftar">
+          <article class="competition-card fade-up">
+            <div class="card-number">01 / KATEGORI LOMBA</div>
+            <h3>Lomba Tari<br>Condong</h3>
+            <p>Ungkapkan karakter, ketegasan, dan keanggunan Tari Condong melalui setiap gerak yang penuh makna.</p>
+            <a class="card-link" href="https://forms.gle/16CqdJFcGmfTYQQD9" target="_blank" rel="noopener noreferrer">FORM PENDAFTARAN <span>↗</span></a>
+          </article>
+          <article class="competition-card fade-up">
+            <div class="card-number">02 / KATEGORI LOMBA</div>
+            <h3>Lomba Tari<br>Oleg</h3>
+            <p>Tampilkan keluwesan, ekspresi, dan pesona gerak Tari Oleg di hadapan para penikmat seni.</p>
+            <a class="card-link" href="https://forms.gle/cpe7LXa8eCnxoEMDA" target="_blank" rel="noopener noreferrer">FORM PENDAFTARAN <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner-showcase" aria-label="Banner visual STANFEST">
+      <img src="assets/banner-stanfest.jpeg" alt="Banner STANFEST Vol. IV dengan ilustrasi penari dan ornamen budaya Bali" loading="lazy" />
+    </section>
+
+    <section class="countdown-section" id="jadwal">
+      <div class="countdown-box fade-up">
+        <div class="countdown-label">MENUJU HARI PELAKSANAAN · 6 FEBRUARI 2027</div>
+        <div class="countdown" aria-live="polite">
+          <div class="time-unit"><strong id="days">--</strong><span>Hari</span></div>
+          <div class="time-unit"><strong id="hours">--</strong><span>Jam</span></div>
+          <div class="time-unit"><strong id="minutes">--</strong><span>Menit</span></div>
+          <div class="time-unit"><strong id="seconds">--</strong><span>Detik</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="daftar-akhir">
+      <div class="section-kicker">Nirleka Pramerta</div>
+      <h2>Jadilah Bagian dari Perayaan Seni</h2>
+      <div class="script-title">Sampai bertemu di panggung!</div>
+      <p>Persiapkan penampilan terbaikmu dan daftarkan diri sebelum periode pendaftaran berakhir.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn btn-primary" href="https://forms.gle/16CqdJFcGmfTYQQD9" target="_blank" rel="noopener noreferrer">Daftar Condong <span>↗</span></a>
+        <a class="btn btn-outline" href="https://forms.gle/cpe7LXa8eCnxoEMDA" target="_blank" rel="noopener noreferrer">Daftar Oleg <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>STANFEST VOL. IV · NIRLEKA PRAMERTA</strong><br>
+    <span>Merawat tradisi, merayakan seni.</span>
+  </footer>
+
+  <script>
+    // Countdown menuju tanggal pelaksanaan STANFEST Vol. IV.
+    const eventDate = new Date('2027-02-06T00:00:00+08:00').getTime();
+    const countdownFields = {
+      days: document.getElementById('days'),
+      hours: document.getElementById('hours'),
+      minutes: document.getElementById('minutes'),
+      seconds: document.getElementById('seconds')
+    };
+
+    function updateCountdown() {
+      const distance = eventDate - Date.now();
+      if (distance <= 0) {
+        Object.values(countdownFields).forEach((field) => field.textContent = '00');
+        return;
+      }
+      const values = {
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((distance / (1000 * 60)) % 60),
+        seconds: Math.floor((distance / 1000) % 60)
+      };
+      Object.entries(values).forEach(([key, value]) => {
+        countdownFields[key].textContent = String(value).padStart(2, '0');
+      });
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Reveal elemen saat masuk ke area pandang.
+    const revealItems = document.querySelectorAll('.fade-up');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach((item) => observer.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('visible'));
+    }
+  </script>
+</body>
+</html>
